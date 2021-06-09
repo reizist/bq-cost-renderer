@@ -60,7 +60,7 @@ function observeDataLoadAmount() {
         }
     }
 
-    function calcPrice() {
+    function calcCost() {
         let loadAmountBlock = document.querySelector('div.query-validation-status > .cfc-truncated-text')
         let expectedLoadAmount = loadAmountBlock.innerText.match(/\d+(.\d+)?\s[a-zA-Z]+/g)
 
@@ -106,10 +106,10 @@ function observeDataLoadAmount() {
     }
 
     function appendCostBlock() {
-        let costs = calcPrice()
+        let costs = calcCost()
 
         let innerDiv = document.createElement('div')
-        innerDiv.innerHTML = "Estimated price: " + costs
+        innerDiv.innerHTML = "Estimated cost: " + costs
         innerDiv.id = costBlockId
 
         targetDiv.appendChild(innerDiv)
