@@ -1,0 +1,13 @@
+{
+    "name" : "BigQuery Cost Renderer",
+    "version" : "0.1",
+    "manifest_version" : 3,
+    "description" : "Render estimated query cost of BigQuery by load amount on new UI.",
+    "content_scripts" : [{
+        "matches" : ["https://console.cloud.google.com/bigquery*"],
+        "js" : ["script.js"]
+    }],
+    "permissions": [
+        "activeTab"
+    ]
+}
